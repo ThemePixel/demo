@@ -761,7 +761,6 @@ body .inverted .header__container {
   justify-content: center;
 }
 .loading-lazy__section .loading-lazy__container .loading-lazy__box .loading-lazy__box-flex .loading-lazy__ul {
-  width: 100%;
   padding-top: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1037,6 +1036,7 @@ body .inverted .header__container {
     row-gap: 5px;
     column-gap: 5px;
     margin-top: 18px;
+    width: 100%;
   }
   .loading-lazy__section .loading-lazy__container .loading-lazy__box .loading-lazy__ul .loading-lazy-hide .loading-lazy__li {
     height: 350px;
