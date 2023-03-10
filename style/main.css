@@ -1016,6 +1016,9 @@ body .inverted .header__container {
   .loading-lazy__section .loading-lazy__container .loading-lazy__box .loading-lazy__box-flex .loading-lazy__ul .loading-lazy-hide .loading-lazy__li .container_loop .container_loop-card .container_loop-image-box img:hover {
     transform: translate(-20%, 1%) rotate(0deg);
   }
+  .loading-lazy__section .loading-lazy__container .loading-lazy__box .loading-lazy__box-flex .loading-lazy__ul .loading-lazy-hide:nth-child(3) {
+    display: none;
+  }
   .loading-lazy__section #load__more-button {
     border: 1px solid wheat;
     margin-bottom: 38px;
