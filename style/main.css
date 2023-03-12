@@ -32,6 +32,25 @@
   --padding: 120px;
   --transition: cubic-bezier(0.4, 0, 0, 1);
 }
+.form__body {
+  position: relative;
+}
+.form__body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 23, 23, 0.95) url("../img/loading.gif") center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+.form__body._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
 html {
   box-sizing: border-box;
 }
@@ -2077,7 +2096,7 @@ footer .footer__container .copyright__footer p {
   border-color: #92003B;
   color: #fff;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1500px) {
   .load_more_button-container {
     padding: 23px 20px;
   }
@@ -2186,4 +2205,94 @@ footer .footer__container .copyright__footer p {
 .tabs_section-container .tabs_section_buttom-content .tabs_section_buttom-box .text p {
   color: #222831;
   line-height: 1.8;
+}
+.form__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.form__section {
+  background-color: #393E46;
+}
+.form__section .form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form__section .form__container h1 {
+  font-family: dm sans, Sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.7em;
+  padding: 20px;
+}
+.form__section .form__container form {
+  padding: 50px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 600px;
+  min-height: 564px;
+  margin-bottom: 38px;
+}
+.form__section .form__container form label {
+  border-bottom: 1px solid #626160;
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  height: 10px;
+  width: 100%;
+  height: 100%;
+}
+.form__section .form__container form label:nth-child(7) {
+  border: 0;
+}
+.form__section .form__container form input {
+  border: 0;
+  width: 99%;
+  height: 100%;
+}
+.form__section .form__container form textarea {
+  width: 100%;
+  height: 400%;
+}
+.form__section .form__container form button {
+  background-color: #FF7BE5;
+  text-transform: capitalize;
+  border: 1px solid wheat;
+  color: #92003B;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 140px;
+  margin-top: 20px;
+  font-family: 'dm sans';
+}
+.form__section .form__container form button:hover {
+  background-color: #F9ADEA;
+  border-color: wheat;
+  color: #92003B;
+}
+.form__section .form__container form img {
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 1000px) {
+  body .form__section .form__container form {
+    max-width: 500px;
+    width: 100%;
+    min-width: 0;
+  }
 }
